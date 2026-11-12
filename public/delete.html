@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remover Cliente | Sushi Luna</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="menu">
+        <a href="login.html">Login</a>
+        <a href="index.html">Cadastrar</a>
+        <a href="get.html">Clientes</a>
+        <a href="delete.html">Remover</a>
+        <a href="put.html">Atualizar</a>
+    </nav>
+
+    <p class="marca">SUSHI LUNA</p>
+
+    <main class="formulario">
+        <h1>Remover Cliente</h1>
+
+        <label for="identificadorCPF">CPF:</label>
+        <input type="text" id="identificadorCPF" placeholder="Digite o CPF" maxlength="11">
+
+        <label for="senhaAdmin">Senha do administrador:</label>
+        <input type="password" id="senhaAdmin" placeholder="Senha do administrador">
+
+        <div class="botoes">
+            <button type="button" onclick="deletarDados()">Remover cliente</button>
+        </div>
+    </main>
+
+    <script src="delete.js"></script>
+</body>
+
+</html>

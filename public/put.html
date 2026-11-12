@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atualizar Cliente | Sushi Luna</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="menu">
+        <a href="login.html">Login</a>
+        <a href="index.html">Cadastrar</a>
+        <a href="get.html">Clientes</a>
+        <a href="delete.html">Remover</a>
+        <a href="put.html">Atualizar</a>
+    </nav>
+
+    <p class="marca">SUSHI LUNA</p>
+
+    <main class="formulario">
+        <h1>Atualizar Cliente</h1>
+
+        <label for="identificador">ID:</label>
+        <input type="text" id="identificador" disabled>
+
+        <label for="identificadorCPF">CPF (somente números):</label>
+        <input type="text" id="identificadorCPF" placeholder="Digite o CPF para buscar" maxlength="11">
+
+        <div class="botoes">
+            <button type="button" onclick="buscarDados()">Buscar cliente</button>
+        </div>
+
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" placeholder="Nome">
+
+        <label for="sobrenome">Sobrenome:</label>
+        <input type="text" id="sobrenome" placeholder="Sobrenome">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="email@exemplo.com">
+
+        <label for="senha">Senha do cliente (deixe em branco para manter):</label>
+        <input type="password" id="senha" placeholder="Nova senha">
+
+        <label for="rua">Rua:</label>
+        <input type="text" id="rua" placeholder="Rua e número">
+
+        <label for="cep">CEP (somente números):</label>
+        <input type="text" id="cep" placeholder="00000000" maxlength="8">
+
+        <label for="cidade">Cidade:</label>
+        <input type="text" id="cidade" placeholder="Cidade">
+
+        <label for="estado">Estado:</label>
+        <select id="estado">
+            <option value="">Selecione</option>
+            <option>AC</option><option>AL</option><option>AP</option><option>AM</option>
+            <option>BA</option><option>CE</option><option>DF</option><option>ES</option>
+            <option>GO</option><option>MA</option><option>MT</option><option>MS</option>
+            <option>MG</option><option>PA</option><option>PB</option><option>PR</option>
+            <option>PE</option><option>PI</option><option>RJ</option><option>RN</option>
+            <option>RS</option><option>RO</option><option>RR</option><option>SC</option>
+            <option>SP</option><option>SE</option><option>TO</option>
+        </select>
+
+        <label for="telefone">Telefone (com DDD):</label>
+        <input type="text" id="telefone" placeholder="11999999999" maxlength="11">
+
+        <label for="senhaAdmin">Senha do administrador:</label>
+        <input type="password" id="senhaAdmin" placeholder="Senha do administrador">
+
+        <div class="botoes">
+            <button type="button" onclick="atualizarDados()">Salvar alterações</button>
+        </div>
+    </main>
+
+    <script src="admin.js"></script>
+    <script src="put.js"></script>
+</body>
+</html>

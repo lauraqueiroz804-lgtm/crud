@@ -1,0 +1,295 @@
+/* ==============================
+   CONFIGURAÇÕES GERAIS
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+
+    background: radial-gradient(
+        circle at center,
+        #101827 0%,
+        #070b13 50%,
+        #02040a 100%
+    );
+
+    color: #e8edf7;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 40px 20px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* ==============================
+   LUA MINGUANTE
+================================ */
+
+body::before {
+    content: "☾";
+
+    position: fixed;
+    top: 35px;
+    right: 9%;
+
+    font-size: 180px;
+    color: #ffffff;
+
+    text-shadow:
+        0 0 10px #ffffff,
+        0 0 25px #dce8ff,
+        0 0 55px #9bbcff,
+        0 0 90px #547bbd;
+
+    transform: rotate(-15deg);
+    opacity: 0.95;
+
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* ==============================
+   TÍTULO E NOME DA LOJA
+================================ */
+
+h1 {
+    font-size: 38px;
+    font-weight: 500;
+    letter-spacing: 8px;
+    text-align: center;
+
+    color: #f0f4ff;
+
+    margin-bottom: 35px;
+
+    text-shadow: 0 0 15px #8ba9df;
+}
+
+.marca {
+    font-size: 15px;
+    letter-spacing: 6px;
+    color: #b9c9e6;
+    margin-bottom: 20px;
+    text-shadow: 0 0 12px #8ba9df;
+}
+
+/* ==============================
+   FORMULÁRIO
+================================ */
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    display: block;
+    width: 350px;
+
+    margin-bottom: 8px;
+
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: #b9c9e6;
+}
+
+input,
+select {
+    display: block;
+
+    width: 350px;
+    height: 45px;
+
+    margin-bottom: 22px;
+    padding: 12px 15px;
+
+    background: #0c1422;
+
+    border: 1px solid #293b58;
+    border-radius: 7px;
+
+    color: #ffffff;
+    font-size: 14px;
+
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus,
+select:focus {
+    border-color: #a5c2f5;
+
+    box-shadow:
+        0 0 8px #789edb55,
+        0 0 18px #789edb22;
+}
+
+input:disabled {
+    background: #080d17;
+    color: #8292ad;
+    cursor: not-allowed;
+}
+
+.erro {
+    width: 350px;
+    min-height: 18px;
+    margin-bottom: 15px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: #ff7b7b;
+}
+
+/* ==============================
+   BOTÕES
+================================ */
+
+.botoes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+button {
+    min-width: 145px;
+
+    padding: 13px 20px;
+    margin: 5px;
+
+    background: linear-gradient(
+        135deg,
+        #263b5b,
+        #14233b
+    );
+
+    color: #edf3ff;
+
+    border: 1px solid #627da7;
+    border-radius: 7px;
+
+    font-size: 13px;
+    letter-spacing: 2px;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #405b83;
+
+    box-shadow: 0 0 18px #8ba9df66;
+
+    transform: translateY(-3px);
+}
+
+/* ==============================
+   MENU DE NAVEGAÇÃO
+================================ */
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 25px;
+}
+
+a {
+    display: inline-block;
+
+    color: #91a9d0;
+
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+.menu a {
+    padding: 8px 14px;
+    border-bottom: 2px solid transparent;
+}
+
+.menu a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 12px #a9caff;
+    border-bottom-color: #a5c2f5;
+}
+
+/* ==============================
+   TABELA DE CLIENTES
+================================ */
+
+.tabela-container {
+    width: 100%;
+    max-width: 900px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 25px;
+    background: #0c1422;
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+th {
+    padding: 14px;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: #b9c9e6;
+    background: #111c2f;
+    border-bottom: 1px solid #293b58;
+}
+
+td {
+    padding: 12px 14px;
+    font-size: 14px;
+    border-bottom: 1px solid #1a2840;
+}
+
+tr:hover td {
+    background: #14233b;
+}
+
+/* ==============================
+   RESPONSIVIDADE
+================================ */
+
+@media (max-width: 600px) {
+
+    body::before {
+        font-size: 120px;
+        top: 15px;
+        right: 5%;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    label,
+    input,
+    select,
+    .erro {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    button {
+        min-width: 125px;
+    }
+}

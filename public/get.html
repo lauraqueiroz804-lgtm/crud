@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes | Sushi Luna</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="menu">
+        <a href="login.html">Login</a>
+        <a href="index.html">Cadastrar</a>
+        <a href="get.html">Clientes</a>
+        <a href="delete.html">Remover</a>
+        <a href="put.html">Atualizar</a>
+    </nav>
+
+    <p class="marca">SUSHI LUNA</p>
+
+    <!-- Tela de senha da loja -->
+    <main class="formulario" id="areaLogin">
+        <h1>Área restrita</h1>
+
+        <label for="senhaLoja">Senha da loja:</label>
+        <input type="password" id="senhaLoja" placeholder="Digite a senha">
+
+        <p id="erro" class="erro"></p>
+
+        <div class="botoes">
+            <button type="button" onclick="verificarSenha()">Entrar</button>
+        </div>
+    </main>
+
+    <!-- Conteúdo protegido -->
+    <main class="formulario tabela-container" id="areaCadastrados" style="display: none;">
+        <h1>Clientes Cadastrados</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>CPF</th>
+                    <th>Email</th>
+                    <th>Cidade/UF</th>
+                    <th>Telefone</th>
+                </tr>
+            </thead>
+            <tbody id="tabela-corpo"></tbody>
+        </table>
+
+        <div class="botoes">
+            <button type="button" onclick="sair()">Sair</button>
+        </div>
+    </main>
+
+    <script src="get.js"></script>
+</body>
+</html>
